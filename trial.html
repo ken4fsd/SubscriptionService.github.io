@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subcription Renewal</title>
+  <style>
+    /* Style for the video container */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    
+    /* Style for the embedded YouTube video */
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Style for the modal block */
+    .modal-block {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 500px;
+      height: 100%;
+      background-color: #f0f1f5;
+      z-index: 1;
+      /* Hide the modal block by default */
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Style for the button that triggers the modal block */
+    .modal-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    /* Style for the close button in the modal block */
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video container -->
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+  </div>
+
+  <!-- Modal block -->
+  <div class="modal-block">
+    <span class="close-button">&times;</span>
+    <h2>Modal Block Title</h2>
+    <p style="font-size: small; color: grey;">This paragraph is written in small fonts and is displayed in grey color.</p>
+   <Center> <script src="https://www.blockonomics.co/js/pay_button.js"></script>
+       <center><a href="" class="blockoPayBtn" data-toggle="modal" data-uid=388e7c1c83b144c0><img width=160 src="https://www.blockonomics.co/img/pay_with_bitcoin_medium.png"></a>
+       </center>
+       <center>
+     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+       <input type="hidden" name="cmd" value="_xclick">
+       <input type="hidden" name="business" value="Elijahokolo3@gmail.com">
+       <input type="hidden" name="item_name" value="Premium Feature">
+       <input type="hidden" name="amount" value="9.99">
+       <input type="hidden" name="currency_code" value="USD">
+       <input type="image" src="https://www.paypalobjects.com/webstatic/en_AU/i/buttons/btn_paywith_primary_m.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+       <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+       </form></center>
+  </div>
+
+  <!-- Button to trigger the modal block -->
+  <button class="modal-button">Open Modal</button>
+
+  <script>
+    // Get the modal block and the button that triggers it
+    const modalBlock = document.querySelector(".modal-block");
+    const modalButton = document.querySelector(".modal-button");
+    const closeButton = document.querySelector(".close-button");
+
+    // Add an event listener to the button to show the modal block
+    modalButton.addEventListener("click", () => {
+      modalBlock.style.transform = "translateX(0%)";
+    });
+
+    // Add an event listener to the close button to hide the modal block
+    closeButton.addEventListener("click", () => {
+      modalBlock.style.transform = "translateX(100%)";
+    });
+  </script>
+</body>
+</html>
